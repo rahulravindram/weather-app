@@ -11,11 +11,14 @@
     height: auto;
     background-color: rgb(90, 172, 223);
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     padding-top: 3rem;
     background-image: url(/Greenery\ Scenery\ Desktop\ Wallpaper\ HD.jpg);
+    background-size: cover; /* Ensures it covers the whole screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Keeps it centered */
+    background-attachment: fixed
 }
 
 .main_content {
