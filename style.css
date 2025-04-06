@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: rgb(90, 172, 223);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3rem;
+    background-image: url(/Greenery\ Scenery\ Desktop\ Wallpaper\ HD.jpg);
+}
+
+.main_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+.weather_box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temp {
+    font-size: 4.5rem;
+}
+
+.humidity,
+.wind {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.time_location {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.condition {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.search_area {
+    padding: 0.8rem;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 1.1rem;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.search_button,
+.location_button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.search_button {
+    background-color: white;
+    color: rgb(90, 172, 223);
+}
+
+.search_button:hover {
+    background-color: rgb(87, 86, 86);
+    color: white;
+}
+
+.location_button {
+    background-color: rgb(87, 86, 86);
+    color: white;
+    width: 100%;
+}
+
+.location_button:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+/* 5-Day Forecast Styling */
+.forecast_section {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 50vw;
+    color: white;
+    text-align: center;
+}
+
+.forecast_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast_card {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    transition: all 0.3s ease;
+}
+
+.forecast_card:hover{
+    transform: scale(1.1);
+}
+
+.forecast_image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.forecast_date {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.recent_searches {
+    margin-top: 1rem;
+}
+
+.recent_cities {
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(90, 172, 223);
+    cursor: pointer;
+}
+
+.recent_cities:focus {
+    background-color: rgb(230, 230, 230);
+}
+
+
+/* iPad Mini and tablets (768px and up) */
+@media (max-width: 991px) {
+    .forecast_section {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .weather_box {
+        width: 100%;
+    }
+
+    .main_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast_card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        align-items: flex-start; /* Prevent elements from shifting too high */
+        min-height: 100vh; /* Make sure background covers */
+    }
+
+    .forecast_section {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+/* iPhone SE and small devices (max 375px) */
+@media (max-width: 480px) {
+    .temp {
+        font-size: 3rem;
+    }
+
+    .time_location {
+        font-size: 1.2rem;
+    }
+
+    .condition {
+        font-size: 1rem;
+    }
+
+    .search_area {
+        font-size: 1rem;
+    }
+
+    .search_button,
+    .location_button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .forecast_date {
+        font-size: 1rem;
+    }
+
+    .forecast_image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .forecast_section h2 {
+        font-size: 1.3rem;
+    }
+
+    .forecast_card {
+        height: auto;
+    }
+    .weather_box {
+        width: 80%;
+    }
+    .forecast_section {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+}

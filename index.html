@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container" >
+        <div class="main_content">
+            <div class="weather_box">
+                <div class="weather_container">
+                    <div class="temp">
+                        <p>C</p>
+                    </div>
+                    <p class="humidity">Humidity: --%</p>
+                    <p class="wind">Wind: -- km/h</p>
+                    <div class="time_location">
+                        <p>City</p>
+                        <span>Time Day Date</span>
+                    </div>
+                    <div class="condition">
+                        <img src="" alt="" class="image">
+                        <p>condition</p>
+                    </div>
+                </div>
+                <div class="search_section">
+                    <nav>
+                        <form action="">
+                            <label>City Name</label>
+                            <input type="text" placeholder="City Name" class="search_area"/>
+                            <button type="submit" class="search_button">Search</button>
+                        </form>
+                        <div class="separator">or</div>
+                        <button class="location_button">Use Current Location</button>
+                        <div class="recent_searches">
+                            <select class="recent_cities" style="display: none;"></select>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="forecast_section">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast_container">
+                    <div class="forecast_card">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
