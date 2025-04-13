@@ -1,3 +1,4 @@
+// Selecting the main weather display fields from the DOM
 const temperatureField = document.querySelector(".temp");
 const locationField = document.querySelector(".time_location p");
 const dateAndTimeField = document.querySelector(".time_location span");
@@ -6,15 +7,21 @@ const conditionFieldImg = document.querySelector(".image");
 const humidityField = document.querySelector(".humidity");
 const windField = document.querySelector(".wind");
 
+// Selecting user interaction elements
 const searchField = document.querySelector(".search_area");
 const form = document.querySelector("form");
 const locationButton = document.querySelector(".location_button");
 
+// Selecting forecast cards (used to display 5-day forecast)
 const forecastCards = document.querySelectorAll(".forecast_card");
 
+
+// event listener for submit in form and when this submit button clicked calls a function searchForLocation
 form.addEventListener("submit", searchForLocation);
+// event listener for click in current location part
 locationButton.addEventListener("click", getUserLocation);
 
+// default location city name set and fucntion to fetch details based on target location using weather api url
 let target = "Kochi";
 
 const fetchResults = async (targetLocation) => {
@@ -52,6 +59,8 @@ function searchForLocation(e) {
     fetchResults(target);
 }
 
+// function to update fetched details in respective feilds 
+
 function updateDetails(temp, locationName, time, condition, image, humidity, wind) {
     let splitDate = time.slice(0, 10);
     let splitTime = time.slice(11, 16);
@@ -79,8 +88,14 @@ function updateForecast(forecastData) {
     });
 }
 
+function getDayName(number) {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return days[number];
+}
 
+fetchResults(target);
 
+// function too get user current location based on longitube an latitude 
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -106,12 +121,6 @@ function getUserLocation() {
     }
 }
 
-function getDayName(number) {
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    return days[number];
-}
-
-fetchResults(target);
 
 
 const recentCitiesDropdown = document.querySelector(".recent_cities");
