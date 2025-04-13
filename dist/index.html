@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Website</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="m-0 p-0 box-border transition-all duration-300 ease-in-out h-auto">
+    <div class="container flex justify-center" >
+        <div class="main_content flex flex-wrap justify-center">
+            <div class="weather_box flex flex-col text-center items-center">
+                <div class="weather_container">
+                    <div class="temp">
+                        <p>C</p>
+                    </div>
+                    <p class="humidity">Humidity: --%</p>
+                    <p class="wind">Wind: -- km/h</p>
+                    <div class="time_location">
+                        <p>City</p>
+                        <span>Time Day Date</span>
+                    </div>
+                    <div class="condition">
+                        <img src="" alt="" class="image">
+                        <p>condition</p>
+                    </div>
+                </div>
+                <div class="search_section">
+                    <nav>
+                        <form action="">
+                            <label>City Name</label>
+                            <input type="text" placeholder="City Name" class="search_area text-center outline-none border-none border-b border-white w-full"/>
+                            <button type="submit" class="search_button outline-none border-none cursor-pointer bg-white">Search</button>
+                        </form>
+                        <div class="separator">or</div>
+                        <button class="location_button outline-none border-none cursor-pointer text-white">Use Current Location</button>
+                        <div class="recent_searches">
+                            <select class="recent_cities text-center outline-none border-none w-full cursor-pointer" style="display: none;"></select>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="forecast_section text-center text-white">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast_container grid">
+                    <div class="forecast_card text-center">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card text-center">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card text-center">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card text-center">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                    <div class="forecast_card text-center">
+                        <p class="forecast_date">(YYYY-MM-DD)</p>
+                        <img src="" alt="weather-icon" class="forecast_image">
+                        <p>Temp: --°C</p>
+                        <p>Wind: -- km/h</p>
+                        <p>Humidity: --%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/script.js"></script>
+</body>
+</html>
